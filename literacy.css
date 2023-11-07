@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Istol Web", sans-serif;
+    font-size: 25px;
+
+}
+
+a,button{
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.grid {
+    position: fixed; /* Position the grid element outside the normal document flow */
+    top: 0; /* Set the top position to 0, aligning it to the top of the viewport */
+    left: 0; /* Set the left position to 0, aligning it to the left of the viewport */
+    width: 100vw; /* Set the width to 100vw (viewport width), making it fill the entire viewport width */
+    height: 100vh; /* Set the height to 100vh (viewport height), making it fill the entire viewport height */
+    z-index: 2; /* Set the z-index to 10, positioning it on top of the video */
+    background-color: rgba(255, 255, 255, 0); /* Add a semi-transparent background color to overlay the video */
+    filter: opacity(.05) invert(1);
+}
+
+
+  
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    z-index: 1;
+}
+    
+.logo-container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px; /* Set the maximum width of the logo */
+    max-height: 100px; /* Set the maximum height of the logo */
+    width: auto; /* Allow the logo to shrink while maintaining aspect ratio */
+    height: auto; /* Allow the logo to shrink while maintaining aspect ratio */
+    z-index: 3;
+    color: #FAF9F6;
+}
+
+.logo-container.slogan{
+    display: block;
+    text-align: center;
+}
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation {
+    position: fixed;
+    top: 10px;
+    right: -500px;
+    width: 250px;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+
+.navigation ul li{
+    color: #fff;
+    text-align: right;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border-bottom: 1pt solid #252525;
+    z-index: 4;
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 5%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #ffffff;
+    width: 100%;
+    height: 1px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.hamburger.open #bar1{
+    background-color: #fff;
+    -webkit-transform: rotate(45deg) translate(6px, 5px);
+    -moz-transform: rotate(45deg) translate(6px, 5px);
+    -ms-transform: rotate(45deg) translate(6px, 5px);
+    -o-transform: rotate(45deg) translate(6px, 5px);
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #fff;
+    -webkit-transform: rotate(45deg) translate(6px, -5px);
+    -moz-transform: rotate(45deg) translate(6px, -5px);
+    -ms-transform: rotate(45deg) translate(6px, -5px);
+    -o-transform: rotate(45deg) translate(6px, -5px);
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+a {
+    text-decoration: none;
+  }
+a:link    { color: rgb(255, 255, 255) }    /* unvisited links */
+a:visited { color: rgb(255, 255, 255) }   /* visited links   */
+a:hover   { color: rgb(255, 255, 255) } /* user hovers     */
+a:active  { color: rgb(255, 255, 255) }   /* active links    */
+a:active  { color: rgb(255, 255, 255) }   /* when element accepts tab focus */
+
+.header a,
+.header a:link,
+.header a:visited,
+.header a:active,
+.header a:hover {
+    color: rgb(255, 255, 255);
+}
