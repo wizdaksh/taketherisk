@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Michroma&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Michroma', sans-serif;
+
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+
+section{
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: fill-available;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    scroll-snap-align: start;
+}
+
+
+.zero{
+    position: relative; /* Maintain the relative positioning for the section */
+    height: 100vh; /* Set a fixed height for the section */
+    display: flex; /* Arrange the video and heading elements within the section */
+    justify-content: center; /* Center the elements horizontally */
+    align-items: center; /* Center the elements vertically */
+    background-size: cover; /* Resize the background image to fit the section */
+    background-position: center; /* Center the background image */
+    z-index: 0; /* Ensure the section is behind the video and heading */
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1; /* Ensure the heading is above the video */
+
+
+}
+
+#v0 {
+    position: relative; /* Remove static positioning */
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+}
+p{
+    width: 70%;
+}
+.one{
+    background-color: rgb(0, 0, 0);
+}
+.two{
+    background-color: black;
+}
+.three{
+    background-color: rgb(0, 0, 0)
+}
+.four{
+    background-color: black;
+}
+.five{
+    background-color: rgb(0, 0, 0);
+}
+.six{
+    background-color: black;
+}
+.seven{
+    background-color: rgb(0, 0, 0);
+}
+.eight{
+    background-color: black;
+}
+.nine{
+    background-color: rgb(0, 0, 0);
+}
+.ten{
+    background-color: black;
+}
+.eleven{
+    background-color: black;
+}
+.twelve{
+    background-color: rgb(0, 0, 0);
+}
+.thirteen{
+    background-color: black;
+}
+.fourteen{
+    background-color: rgb(0, 0, 0);
+}
+
+img {
+    position: absolute;
+    max-width: 200px;
+    display: inline-block;
+    filter: invert(1);
+    top: 0;
+    left: 5%;
+    z-index: 5;
+}
+
+.mouse {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+    border: 3px solid #ffffff;
+    opacity: .8;
+    border-radius: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    justify-content: center;
+    transform: translateX(-50%);
+    transform: translateY(-100%);
+    &::before {
+        content: '';
+        width: 2px;
+        height: 8px;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translateX(-60%);
+        background-color: #ffffff;
+        border-radius: 50%;
+        opacity: 1;
+        animation: wheel 1.5s infinite;
+        -webkit-animation: wheel 1.5s infinite;
+    }
+    z-index: 3;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 30px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 30px;
+    }
+}
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation {
+    position: fixed;
+    top: 10px;
+    right: -500px;
+    width: 250px;
+    transition: all 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+
+.navigation ul li{
+    color: #fff;
+    text-align: right;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border-bottom: 1pt solid #252525;
+    z-index: 4;
+}
+
+.hamburger, .bar{
+    position: fixed;
+}
+
+.hamburger{
+    display: block;
+    top: 5%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar{
+    top: 3px;
+    background: #ffffff;
+    width: 100%;
+    height: 1px;
+    transition: all .3s ease-in;
+}
+
+#bar2{
+    top: 11px;
+}
+
+#bar3{
+    top: 19px;
+}
+
+.hamburger.open #bar1{
+    background-color: #fff;
+    -webkit-transform: rotate(45deg) translate(6px, 5px);
+    -moz-transform: rotate(45deg) translate(6px, 5px);
+    -ms-transform: rotate(45deg) translate(6px, 5px);
+    -o-transform: rotate(45deg) translate(6px, 5px);
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2{
+    background-color: transparent;
+}
+
+.hamburger.open #bar3{
+    background-color: #fff;
+    -webkit-transform: rotate(45deg) translate(6px, -5px);
+    -moz-transform: rotate(45deg) translate(6px, -5px);
+    -ms-transform: rotate(45deg) translate(6px, -5px);
+    -o-transform: rotate(45deg) translate(6px, -5px);
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+a {
+    text-decoration: none;
+  }
+a:link    { color: rgb(255, 255, 255) }    /* unvisited links */
+a:visited { color: rgb(255, 255, 255) }   /* visited links   */
+a:hover   { color: rgb(255, 255, 255) } /* user hovers     */
+a:active  { color: rgb(255, 255, 255) }   /* active links    */
+a:active  { color: rgb(255, 255, 255) }   /* when element accepts tab focus */
+
+.header a,
+.header a:link,
+.header a:visited,
+.header a:active,
+.header a:hover {
+    color: rgb(255, 255, 255);
+}

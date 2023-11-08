@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Michroma&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
-    font-family: "Istol Web", sans-serif;
-    font-size: 25px;
+    font-family: "Michroma", sans-serif;
 
 }
 
@@ -46,8 +48,8 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 300px; /* Set the maximum width of the logo */
-    max-height: 100px; /* Set the maximum height of the logo */
+    max-width: fit-content; /* Set the maximum width of the logo */
+    max-height: fit-content; /* Set the maximum height of the logo */
     width: auto; /* Allow the logo to shrink while maintaining aspect ratio */
     height: auto; /* Allow the logo to shrink while maintaining aspect ratio */
     z-index: 3;
@@ -55,8 +57,12 @@ video {
 }
 
 .logo-container.slogan{
-    display: block;
+    position: absolute;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
 }
 
 nav{
