@@ -12,6 +12,7 @@ function toggleMenu() {
     }
   }
   
-  window.onload = function() {
-    document.querySelector('.navigation').classList.add('closed');
-  };
+
+window.onwheel = ()=> console.log("Scrolling...");
+
+
