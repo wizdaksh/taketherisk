@@ -17,17 +17,17 @@ a,button{
     width: 100vw;
     height: 100vh; /* Full viewport height */
     overflow: hidden;
+    z-index: 100;
 }
 
-.grid {
-    position: fixed; /* Position the grid element outside the normal document flow */
-    top: 0; /* Set the top position to 0, aligning it to the top of the viewport */
-    left: 0; /* Set the left position to 0, aligning it to the left of the viewport */
-    width: 100vw; /* Set the width to 100vw (viewport width), making it fill the entire viewport width */
-    height: 100vh; /* Set the height to 100vh (viewport height), making it fill the entire viewport height */
-    z-index: 2; /* Set the z-index to 10, positioning it on top of the video */
-    background-color: rgba(255, 255, 255, 0); /* Add a semi-transparent background color to overlay the video */
-    filter: opacity(.05) invert(1);
+
+#background {
+    background: transparent url(./items/bg-pattern.png) repeat center center;
+    background-size: .4%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 
@@ -52,7 +52,7 @@ video {
     max-height: fit-content; /* Set the maximum height of the logo */
     width: auto; /* Allow the logo to shrink while maintaining aspect ratio */
     height: auto; /* Allow the logo to shrink while maintaining aspect ratio */
-    z-index: 3;
+    z-index: 10000;
     color: #FAF9F6;
 }
 
@@ -70,6 +70,7 @@ nav{
     top: 100px;
     right: 50px;
     width: 250px;
+    z-index: 100000;
 }
 
 .navigation {
@@ -78,7 +79,7 @@ nav{
     right: -500px;
     width: 250px;
     transition: all 0.5s ease-in-out;
-    z-index: 10;
+    z-index: 100000;
   }
 
 

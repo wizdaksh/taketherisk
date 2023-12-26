@@ -5,21 +5,42 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Michroma', sans-serif;
-
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    -webkit-overflow-scrolling: auto;
-    scroll-snap-type: y mandatory;
     
 }
-body{
-    scroll-behavior: smooth;   
-    overflow-y: scroll;
+#wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(0, 0, 0);
+}
+
+.invisible-::-webkit-scrollbar{
+    display: none;
+}
+
+html::before {
+    z-index: -1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    content: "";
+}
+
+html {
+    -webkit-overflow-scrolling: auto;
+    scroll-snap-type: y mandatory;
     overflow-x: hidden;
+    overflow-y: scroll;
+    
+}
+
+
+body{
+    display: none;
+    scroll-behavior: smooth;   
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overscroll-behavior: contain;
 }
 
 .container{
@@ -31,6 +52,14 @@ body{
     flex-basis: 100vh;   
 }
 
+#background {
+    background: transparent url(./items/bg-pattern.png) repeat center center;
+    background-size: .4%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
 
 
 section{
@@ -58,7 +87,7 @@ section{
     align-items: center; /* Center the elements vertically */
     background-size: cover; /* Resize the background image to fit the section */
     background-position: center; /* Center the background image */
-    z-index: 0; /* Ensure the section is behind the video and heading */
+    z-index: 1002; /* Ensure the section is behind the video and heading */
 }
 
 h1:not(.logo-container) {
@@ -69,7 +98,7 @@ h1:not(.logo-container) {
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-    z-index: 3; /* Ensure the heading is above the video */
+    z-index: 10001; /* Ensure the heading is above the video */
 
 
 }
@@ -85,7 +114,7 @@ h1:not(.logo-container) {
 }
 p{
     width: 70%;
-    z-index: 5;
+    z-index: 10000;
 }
 
 
@@ -97,7 +126,7 @@ img {
     filter: invert(1);
     top: 0;
     left: 5%;
-    z-index: 5;
+    z-index: 10000;
 }
 
 .mouse {
@@ -157,7 +186,7 @@ nav{
     right: -500px;
     width: 250px;
     transition: all 0.5s ease-in-out;
-    z-index: 10;
+    z-index: 100000;
   }
 
 
